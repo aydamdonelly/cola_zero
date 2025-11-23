@@ -1,0 +1,28 @@
+# Core dependencies
+torch>=2.0.0
+transformers>=4.30.0
+datasets>=2.10.0
+accelerate>=0.20.0
+safetensors>=0.3.0
+
+# Quantization libraries
+gptqmodel>=4.0.0
+# AutoGPTQ is required as a backend for optimum/lm-eval to load GPTQ models
+# For CUDA 11.8: auto-gptq>=0.7.0
+# For CUDA 12.1+: auto-gptq>=0.7.0
+# Installation: pip install auto-gptq --extra-index-url https://huggingface.github.io/autogptq-index/whl/cu118/
+
+# Feature extraction
+scikit-learn>=1.2.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Evaluation (REQUIRED for downstream tasks)
+# lm-eval-harness for zero-shot task evaluation (HellaSwag, ARC, PIQA, WinoGrande)
+lm-eval>=0.4.0
+# Optimum is required for lm-eval to load GPTQ models
+optimum>=1.16.0
+# Installation: pip install lm-eval[api] optimum auto-gptq
+
+# Utilities
+tqdm>=4.65.0
